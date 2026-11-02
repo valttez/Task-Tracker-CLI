@@ -1,8 +1,6 @@
 import json
 import os
 from models import Task
-from practice.laba3.laba3 import task
-
 
 class TaskRepository:
     def __init__(self, filename: str = "tasks.json") -> None:

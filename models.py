@@ -10,7 +10,7 @@ class Task:
     createdAt: str
     updatedAt: str
 
-    VALID_STATUSES = ("todo", "in_progress", "done")
+    VALID_STATUSES = ("todo", "in-progress", "done")
 
     @classmethod
     def create(cls, task_id: int, descr: str) -> "Task":
@@ -34,7 +34,7 @@ class Task:
         self.updatedAt = datetime.now().isoformat(timespec="seconds")
 
     def to_dict(self) -> dict:
-        asdict(self)
+        return asdict(self)
 
     @classmethod
     def from_dict(cls, data: dict) -> "Task":
